@@ -1,0 +1,87 @@
+@import '../../../styles/base.scss';
+@import '../../../styles/color.scss';
+
+.topbar {
+  width: calc(100% - $header-width);
+  height: $header-height;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $z-fixed;
+  background: rgba(255, 255, 255, 0.3);
+  &__wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    // outline: 3px solid $first-color;
+    border-bottom: 1px solid $first-color;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 2rem;
+    width: 350px;
+    height: 100%;
+    input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: transparent;
+      padding: 0 10px;
+      font-size: $normal-font-size;
+      font-weight: 600;
+      color: #fff;
+      &::placeholder {
+        color: #fff;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    ion-icon {
+      font-size: 1.5rem;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 20px;
+    ion-icon {
+      color: #fff;
+      font-size: 2.2rem;
+      cursor: pointer;
+      &:first-child {
+        color: yellow
+      }
+    }
+  }
+
+  &__user {
+    cursor: pointer;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+  ion-icon:hover{
+    color: $first-color;
+  }
+}

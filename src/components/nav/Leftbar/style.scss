@@ -1,0 +1,73 @@
+@import '../../../styles/color.scss';
+@import '../../../styles/base.scss';
+
+.leftnav {
+  width: $header-width;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: $z-fixed;
+  color: $container-color;
+  &__wrap {
+    background: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    font-size: .8rem;
+    padding-bottom: 1rem;
+    font-weight: 600;
+    padding: 1rem 1.2rem;
+  }
+
+  .l__logo {
+    img {
+      width: 100px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    li {
+      padding: 5px 1.5rem;
+      width: 100%;
+      color: rgb(207, 207, 207);
+      border: 3px;
+      &:hover {
+        color: $first-color;
+        background: rgb(212, 212, 212);
+        border-left: 4px solid $first-color;
+        padding: 5px calc(1.5rem - 4px);
+        a {
+          color: $first-color;
+        }
+      }
+      ion-icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+      }
+      a {
+        color: rgb(207, 207, 207);
+        display: block;
+        padding: 5px;
+        font-size: 15px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .active {
+      color: $first-color;
+      background: rgb(212, 212, 212);
+      border-left: 4px solid $first-color;
+      padding: 5px calc(1.5rem - 4px);
+      a {
+        color: $first-color
+      }
+    }
+  }
+}
